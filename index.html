@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendaftaran Member IMPHNEN</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="particles"></div>
+
+  <section class="hero">
+    <img class="hero-banner" src="Gambar/banner imphnen 3.png" alt="IMPHNEN Banner">
+    <div class="hero-overlay"></div>
+  </section>
+
+  <div class="logo-float">
+    <img src="Gambar/imphnen 2.png" alt="Logo IMPHNEN">
+  </div>
+
+  <main class="container">
+
+    <div class="heading-section">
+      <span class="badge">Open Recruitment Member 2026</span>
+      <h1>Bergabung Bersama Komunitas <span>IMPHNEN</span></h1>
+      <p>
+        Komunitas para calon programmer hamndal yang 
+        <em>enggan ngoding</em>.
+        <span class="cat-laugh">😹</span>
+        <br>Daftarkan diri kamu sekarang dan buktikan solidaritas kmalasanmu!
+      </p>
+    </div>
+
+    <div class="stepper">
+      <div class="stepper-dot active"></div>
+      <div class="stepper-dot"></div>
+      <div class="stepper-dot"></div>
+      <div class="stepper-dot"></div>
+      <div class="stepper-dot"></div>
+    </div>
+
+    <div class="form-card">
+      <h2>Formulir Pendaftaran Member</h2>
+      <p class="subtitle">
+        Isi formulir berikut dengan lengkap dan benar.
+        Kolom bertanda <strong style="color:#29b6f6;">*</strong> wajib diisi.
+      </p>
+      <div class="divider"></div>
+
+      <form id="registrationForm" novalidate>
+
+        <div class="form-group">
+          <label for="nama">Nama Lengkap <span class="req">*</span></label>
+          <div class="input-icon-wrap">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+            <input type="text" id="nama" name="nama"
+              placeholder="Contoh: Veeto McGill"
+              autocomplete="name">
+          </div>
+          <span class="error-msg" id="err-nama"></span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Alamat Email <span class="req">*</span></label>
+            <div class="input-icon-wrap">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m22 7-10 7L2 7"/>
+              </svg>
+              <input type="email" id="email" name="email"
+                placeholder="name@email.com"
+                autocomplete="email">
+            </div>
+            <span class="error-msg" id="err-email"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Nomor HP / WhatsApp <span class="req">*</span></label>
+            <div class="input-icon-wrap">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="5" y="2" width="14" height="20" rx="2"/>
+                <line x1="12" y1="18" x2="12.01" y2="18"/>
+              </svg>
+              <input type="tel" id="phone" name="phone"
+                placeholder="08xxxxxxxxxx"
+                autocomplete="tel">
+            </div>
+            <span class="error-msg" id="err-phone"></span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="kota">Kota / Domisili <span class="req">*</span></label>
+            <div class="input-icon-wrap">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <input type="text" id="kota" name="kota"
+                placeholder="Surabaya, Jakarta, dll">
+            </div>
+            <span class="error-msg" id="err-kota"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="skill">Level Skill Pemrograman <span class="req">*</span></label>
+            <div class="input-icon-wrap">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+              <select id="skill" name="skill">
+                <option value="" disabled selected>-- Pilih level --</option>
+                <option value="pemula">Masih Pemula</option>
+                <option value="bisa-dikit">Bisa Dikit-dikit</option>
+                <option value="lumayan">Lumayan Mengerti</option>
+                <option value="jago-tapi-males">Jago Tapi Malas</option>
+                <option value="ga-mau-ngoding">Tidak Mau Ngoding Sama Sekali</option>
+              </select>
+            </div>
+            <span class="error-msg" id="err-skill"></span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="alasan">
+            Alasan Ingin Bergabung dengan IMPHNEN <span class="req">*</span>
+          </label>
+          <textarea id="alasan" name="alasan"
+            placeholder="Contoh: Karena saya ingin menjadi programmer handal namun masih enggan ngoding, dan butuh teman senasib sepenanggungan..."></textarea>
+          <span class="error-msg" id="err-alasan"></span>
+          <div class="char-counter"><span id="charCount">0 karakter</span></div>
+        </div>
+
+        <button type="submit" class="btn-submit">
+          Kirim Pendaftaran
+        </button>
+
+      </form>
+
+      <div class="result-section" id="resultSection">
+        <div class="result-card">
+          <div class="result-header">
+            <span class="cat-icon">😹</span>
+            <div>
+              <h3>Pendaftaran Berhasil Dikirim!</h3>
+              <p>Berikut ringkasan data yang telah Anda daftarkan.</p>
+            </div>
+          </div>
+          <div id="resultBody"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <p>
+      &copy; 2025 IMPHNEN &mdash;
+      <a href="https://facebook.com/groups/programmerhandal" target="_blank" rel="noopener">
+        facebook.com/groups/programmerhandal
+      </a>
+    </p>
+    <p style="margin-top:6px;">Ingin Menjadi Programmer Handal, Namun Enggan Ngoding</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
