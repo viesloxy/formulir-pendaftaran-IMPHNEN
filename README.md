@@ -51,7 +51,7 @@ formulir-pendaftaran-IMPHNEN/
 
 ## 🖼️ Preview
 
-![Preview](preview.jpeg)
+![Preview](gambar/preview.jpeg)
 
 ---
 
